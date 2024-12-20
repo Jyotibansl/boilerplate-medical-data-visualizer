@@ -40,8 +40,7 @@ def draw_cat_plot():
     # 8
     # Save the plot 
     fig = cat_plot.fig
-     # Show the plot 
-    plt.show()
+
 
     # 9
     fig.savefig('catplot.png')
