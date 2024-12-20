@@ -34,8 +34,8 @@ def draw_cat_plot():
     # Draw the catplot with 'sns.catplot()' 
     cat_plot = sns.catplot( x="variable", y="total", hue="value", col="cardio", data=df_cat, kind="bar", height=5, aspect=1 )    
     # Customize the plot 
-    cat_plot.set_axis_labels("Variable", "total") 
-    cat_plot.set_titles("Categorical Plot") 
+    cat_plot.set_axis_labels("variable", "total") 
+    cat_plot.set_titles("cardio {col_name}") 
 
     # 8
     # Save the plot 
@@ -69,7 +69,7 @@ def draw_heat_map():
     fig, ax = plt.subplots(figsize=(10, 8))
 
     # 15
-    sns.heatmap(corr, mask=mask, annot=True, fmt=".1f", cmap='coolwarm', vmin=-1, vmax=1, linewidths=.5)
+    sns.heatmap(corr, mask=mask, annot=True, fmt=".1f", vmin=-0.15, vmax=0.3, linewidths=.5)
 
 
     # 16
